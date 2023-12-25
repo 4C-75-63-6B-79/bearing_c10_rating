@@ -11,12 +11,12 @@ function RootLayout() {
         <nav>
           <ul>
             <li>
-              <NavLink path="Home" element={<Home />}>
+              <NavLink to="/" element={<Home />}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink path="ThingsToAdd" element={<ThingsToAdd />}>
+              <NavLink to="ThingsToAdd" element={<ThingsToAdd />}>
                 ThingsToAdd
               </NavLink>
             </li>
