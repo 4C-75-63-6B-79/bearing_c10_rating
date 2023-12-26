@@ -8,14 +8,17 @@ import {
 import RootLayout from "../Components/RootLayout/RootLayout";
 
 import Home from "../Routes/Home/Home";
-import ThingsToAdd from "../Routes/ThingsToAdd/ThingsToAdd";
+import BearingLoadLifeAtRatedReliability from "../Routes/BearingLoadLifeAtRatedReliability/BearingLoadLifeAtRatedReliability";
 
 function BearingSelector() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="ThingsToAdd" element={<ThingsToAdd />} />
+        <Route
+          path="BearingLoadLifeAtRatedReliability"
+          element={<BearingLoadLifeAtRatedReliability />}
+        />
       </Route>,
     ),
   );

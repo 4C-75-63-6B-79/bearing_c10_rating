@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 import Home from "../../Routes/Home/Home";
-import ThingsToAdd from "../../Routes/ThingsToAdd/ThingsToAdd";
+import BearingLoadLifeAtRatedReliability from "../../Routes/BearingLoadLifeAtRatedReliability/BearingLoadLifeAtRatedReliability";
 
 function RootLayout() {
   return (
@@ -16,8 +16,11 @@ function RootLayout() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="ThingsToAdd" element={<ThingsToAdd />}>
-                ThingsToAdd
+              <NavLink
+                to="BearingLoadLifeAtRatedReliability"
+                element={<BearingLoadLifeAtRatedReliability />}
+              >
+                Bearing Load Life At Rated Reliability
               </NavLink>
             </li>
           </ul>
