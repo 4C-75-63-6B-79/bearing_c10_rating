@@ -69,8 +69,8 @@ function TextBearingLoadLifeAtRatedReliability() {
                 <ul>
                   <li>a = 3 for ball bearings</li>
                   <li>
-                    a = 10/3 for roller bearings (cylindrical and tapered
-                    roller)
+                    a = 10/3 for roller bearings &#40; cylindrical and tapered
+                    roller &#41;
                   </li>
                 </ul>
               </li>
