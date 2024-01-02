@@ -1,30 +1,9 @@
 import { Fragment } from "react";
-import { useState } from "react";
-import { Form } from "react-router-dom";
+import { Form, useActionData } from "react-router-dom";
 import TextBearingLoadLifeAtRatedReliability from "../../Components/TextBearingLoadLifeAtRatedReliability/TextBearingLoadLifeAtRatedReliability";
 
 function BearingLoadLifeAtRatedReliability() {
-  const [designLoad, setDesignLoad] = useState("");
-  const [designLife, setDesignLife] = useState("");
-  const [valueOfA, setValueOfA] = useState(3);
-
-  function valueOfDesignLoadChanged(event) {
-    setDesignLoad(event.target.value);
-  }
-
-  function valueOfDesignLifeChanged(event) {
-    setDesignLife(event.target.value);
-  }
-
-  function typeOfBearingChanged(event) {
-    setValueOfA(event.target.name.checked ? event.target.value : valueOfA);
-  }
-
-  function calculateC10Rating() {
-    let c10 = designLoad * Math.pow(designLife / 1000000, 1 / valueOfA);
-    console.log(c10);
-  }
-
+  const actionData = useActionData();
   return (
     <Fragment>
       <h2>Bearing Load Life At Rated Reliability</h2>
@@ -47,8 +26,7 @@ function BearingLoadLifeAtRatedReliability() {
               pattern="([0-9]{1,})||([0-9]{0,}[.][0-9]{1,})"
               size="10"
               placeholder="10.0"
-              value={designLoad}
-              onChange={valueOfDesignLoadChanged}
+              // value={designLoad}
               required
             ></input>
           </div>
@@ -64,8 +42,7 @@ function BearingLoadLifeAtRatedReliability() {
               pattern="[0-9]{1,}"
               size="20"
               placeholder="1000000"
-              value={designLife}
-              onChange={valueOfDesignLifeChanged}
+              // value={designLife}
               required
             ></input>
           </div>
@@ -80,7 +57,6 @@ function BearingLoadLifeAtRatedReliability() {
                 id="ballBearing"
                 name="typeOfBearing"
                 value="3"
-                onChange={typeOfBearingChanged}
                 defaultChecked
               ></input>
               <label htmlFor="ballBearing">
@@ -92,7 +68,6 @@ function BearingLoadLifeAtRatedReliability() {
                 id="rollerBearing"
                 name="typeOfBearing"
                 value="10/3"
-                onChange={typeOfBearingChanged}
               ></input>
               <label htmlFor="rollerBearing">
                 Roller Bearing &#40; <i>a = 10 &frasl; 3</i> &#41;
@@ -107,6 +82,8 @@ function BearingLoadLifeAtRatedReliability() {
           </div>
         </fieldset>
       </Form>
+      {actionData && actionData.error && <p>{actionData.error}</p>}
+      {actionData && actionData.c10Rating && <p>{actionData.c10Rating}</p>}
       <br></br>
       <TextBearingLoadLifeAtRatedReliability />
     </Fragment>
