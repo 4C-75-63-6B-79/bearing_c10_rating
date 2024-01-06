@@ -17,5 +17,10 @@ function Legend({ legendData }) {
 export default Legend;
 
 Legend.propTypes = {
-  legendData: PropTypes.instanceOf(Object).isRequired,
+  legendData: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    symbol: PropTypes.string.isRequired,
+    symbolSub: PropTypes.string.isRequired,
+    unit: PropTypes.string.isRequired,
+  }),
 };
