@@ -46,6 +46,6 @@ Input.propTypes = {
     inputPattern: PropTypes.string.isRequired,
     inputSize: PropTypes.string.isRequired,
     inputPlaceholder: PropTypes.string.isRequired,
-    inputRequired: PropTypes.boolean,
+    inputRequired: PropTypes.oneOf([true, false]),
   }),
 };
