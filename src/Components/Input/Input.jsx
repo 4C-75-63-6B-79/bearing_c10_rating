@@ -2,10 +2,9 @@ import { Fragment } from "react";
 import PropTypes from "prop-types";
 
 function Input({ inputData }) {
-  const { legend } = inputData;
   return (
     <Fragment>
-      {!legend ? (
+      {
         <div className="inputs">
           <label htmlFor={inputData["labelFor"]}>
             {inputData["labelText"]} <i>{inputData["labelUnit"]}</i>{" "}
@@ -23,9 +22,7 @@ function Input({ inputData }) {
             required={inputData["inputRequired"]}
           ></input>
         </div>
-      ) : (
-        "do nothing"
-      )}
+      }
     </Fragment>
   );
 }
