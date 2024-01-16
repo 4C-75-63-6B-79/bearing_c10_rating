@@ -16,10 +16,18 @@ function Input({ inputData }) {
             type={inputData["inputType"]}
             name={inputData["inputName"]}
             id={inputData["inputId"]}
-            pattern={inputData["inputPattern"]}
-            size={inputData["inputSize"]}
-            placeholder={inputData["inputPlaceholder"]}
-            required={inputData["inputRequired"]}
+            pattern={inputData["inputPattern"] ?? inputData["inputPattern"]}
+            size={inputData["inputSize"] ?? inputData["inputSize"]}
+            placeholder={
+              inputData["inputPlaceholder"] ?? inputData["inputPlaceholder"]
+            }
+            required={
+              inputData["inputRequired"] !== null && inputData["inputRequired"]
+            }
+            defaultChecked={
+              inputData["defaultChecked"] !== null &&
+              inputData["defaultChecked"]
+            }
           ></input>
         </div>
       }
@@ -43,6 +51,7 @@ Input.propTypes = {
     inputPattern: PropTypes.string.isRequired,
     inputSize: PropTypes.string.isRequired,
     inputPlaceholder: PropTypes.string.isRequired,
-    inputRequired: PropTypes.oneOf([true, false]),
+    inputRequired: PropTypes.oneOf([true, false, null]),
+    defaultChecked: PropTypes.oneOf([true, false, null]),
   }),
 };
