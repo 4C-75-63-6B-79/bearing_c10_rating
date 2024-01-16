@@ -10,6 +10,7 @@ function Input({ inputData }) {
       pattern: inputData["inputPattern"],
     }),
     ...(inputData["inputSize"] !== "" && { size: inputData["inputSize"] }),
+    ...(inputData["inputValue"] !== "" && { value: inputData["inputValue"] }),
     ...(inputData["inputPlaceholder"] !== "" && {
       placeholder: inputData["inputPlaceholder"],
     }),
@@ -66,6 +67,7 @@ Input.propTypes = {
     inputId: PropTypes.string.isRequired,
     inputPattern: PropTypes.string.isRequired,
     inputSize: PropTypes.string.isRequired,
+    inputValue: PropTypes.string.isRequired,
     inputPlaceholder: PropTypes.string.isRequired,
     inputRequired: PropTypes.oneOf([true, false, ""]),
     defaultChecked: PropTypes.oneOf([true, false, ""]),
