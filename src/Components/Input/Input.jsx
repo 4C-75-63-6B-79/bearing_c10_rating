@@ -2,6 +2,24 @@ import { Fragment } from "react";
 import PropTypes from "prop-types";
 
 function Input({ inputData }) {
+  const inputAttributes = {
+    ...(inputData["inputType"] !== "" && { type: inputData["inputType"] }),
+    ...(inputData["inputName"] !== "" && { name: inputData["inputName"] }),
+    ...(inputData["inputId"] !== "" && { id: inputData["inputId"] }),
+    ...(inputData["inputPattern"] !== "" && {
+      pattern: inputData["inputPattern"],
+    }),
+    ...(inputData["inputSize"] !== "" && { size: inputData["inputSize"] }),
+    ...(inputData["inputPlaceholder"] !== "" && {
+      placeholder: inputData["inputPlaceholder"],
+    }),
+    ...(inputData["inputRequired"] !== "" && {
+      required: inputData["inputRequired"],
+    }),
+    ...(inputData["defaultChecked"] !== "" && {
+      defaultChecked: inputData["defaultChecked"],
+    }),
+  };
   return (
     <Fragment>
       {
@@ -12,23 +30,7 @@ function Input({ inputData }) {
             <sub>{inputData["labelSymbolSub"]}</sub>
             &emsp;
           </label>
-          <input
-            type={inputData["inputType"]}
-            name={inputData["inputName"]}
-            id={inputData["inputId"]}
-            pattern={inputData["inputPattern"] ?? inputData["inputPattern"]}
-            size={inputData["inputSize"] ?? inputData["inputSize"]}
-            placeholder={
-              inputData["inputPlaceholder"] ?? inputData["inputPlaceholder"]
-            }
-            required={
-              inputData["inputRequired"] !== null && inputData["inputRequired"]
-            }
-            defaultChecked={
-              inputData["defaultChecked"] !== null &&
-              inputData["defaultChecked"]
-            }
-          ></input>
+          <input {...inputAttributes}></input>
         </div>
       }
     </Fragment>
