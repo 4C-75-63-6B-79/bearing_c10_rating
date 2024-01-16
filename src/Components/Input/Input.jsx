@@ -24,13 +24,27 @@ function Input({ inputData }) {
     <Fragment>
       {
         <div className="inputs">
-          <label htmlFor={inputData["labelFor"]}>
-            {inputData["labelText"]} <i>{inputData["labelUnit"]}</i>{" "}
-            {inputData["labelSymbol"]}
-            <sub>{inputData["labelSymbolSub"]}</sub>
-            &emsp;
-          </label>
-          <input {...inputAttributes}></input>
+          {inputData["inputType"] === "radio" ? (
+            <>
+              <input {...inputAttributes}></input>
+              <label htmlFor={inputData["labelFor"]}>
+                {inputData["labelText"]} <i>{inputData["labelUnit"]}</i>{" "}
+                {inputData["labelSymbol"]}
+                <sub>{inputData["labelSymbolSub"]}</sub>
+                &emsp;
+              </label>
+            </>
+          ) : (
+            <>
+              <label htmlFor={inputData["labelFor"]}>
+                {inputData["labelText"]} <i>{inputData["labelUnit"]}</i>{" "}
+                {inputData["labelSymbol"]}
+                <sub>{inputData["labelSymbolSub"]}</sub>
+                &emsp;
+              </label>
+              <input {...inputAttributes}></input>
+            </>
+          )}
         </div>
       }
     </Fragment>
