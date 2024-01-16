@@ -67,7 +67,7 @@ Input.propTypes = {
     inputPattern: PropTypes.string.isRequired,
     inputSize: PropTypes.string.isRequired,
     inputPlaceholder: PropTypes.string.isRequired,
-    inputRequired: PropTypes.oneOf([true, false, null]),
-    defaultChecked: PropTypes.oneOf([true, false, null]),
+    inputRequired: PropTypes.oneOf([true, false, ""]),
+    defaultChecked: PropTypes.oneOf([true, false, ""]),
   }),
 };
