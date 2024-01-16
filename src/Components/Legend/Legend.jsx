@@ -9,7 +9,7 @@ function Legend({ legendData }) {
         {symbol}
         <sub>{symbolSub}</sub>
       </i>{" "}
-      in {unit}
+      {unit && "in " + unit}
     </legend>
   );
 }
