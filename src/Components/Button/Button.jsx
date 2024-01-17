@@ -1,12 +1,22 @@
 import PropTypes from "prop-types";
 
 function Button({ buttonData }) {
+  const buttonAttributes = {
+    ...(buttonData["buttonType"] !== "" && { type: buttonData["buttonType"] }),
+    ...(buttonData["buttonOnClick"] !== "" && {
+      onClick: buttonData["buttonOnClick"],
+    }),
+  };
   return (
     <div className="button">
       <br></br>
-      <button type={buttonData["buttonType"]}>
-        {buttonData["buttonText"] + " " + buttonData["buttonSymbol"]}{" "}
-        <sub>{buttonData["buttonSymbolSub"]}</sub>
+      <button {...buttonAttributes}>
+        {buttonData["buttonText"]}
+        {buttonData["buttonSymbol"] !== "" && " " + buttonData["buttonSymbol"]}
+        {buttonData["buttonSymbolSub"] !== "" && " "}
+        {buttonData["buttonSymbolSub"] !== "" && (
+          <sub>{buttonData["buttonSymbolSub"]}</sub>
+        )}
       </button>
     </div>
   );
@@ -20,5 +30,6 @@ Button.propTypes = {
     buttonText: PropTypes.string.isRequired,
     buttonSymbol: PropTypes.string.isRequired,
     buttonSymbolSub: PropTypes.string.isRequired,
+    buttonOnClick: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   }),
 };
