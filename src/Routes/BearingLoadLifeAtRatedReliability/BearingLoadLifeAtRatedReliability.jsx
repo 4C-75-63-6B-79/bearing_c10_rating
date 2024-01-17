@@ -88,6 +88,7 @@ function BearingLoadLifeAtRatedReliability() {
     ],
     button: {
       buttonType: "submit",
+      buttonOnClick: "",
       buttonText: "Calculate",
       buttonSymbol: "C",
       buttonSymbolSub: "10",
