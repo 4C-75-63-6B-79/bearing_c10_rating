@@ -1,4 +1,5 @@
 import { Fragment, useState } from "react";
+import Button from "../Button/Button";
 
 function TextBearingLoadLifeAtRatedReliability() {
   const [textOnOrOff, setTextOnOrOff] = useState(0);
@@ -9,9 +10,15 @@ function TextBearingLoadLifeAtRatedReliability() {
 
   return (
     <Fragment>
-      <button type="button" onClick={() => textOnOffClickHandler()}>
-        Explantion Text {textOnOrOff === 0 ? "On" : "Off"}
-      </button>
+      <Button
+        buttonData={{
+          buttonType: "button",
+          buttonOnClick: textOnOffClickHandler,
+          buttonText: "Explantion Text " + (textOnOrOff === 0 ? "On" : "Off"),
+          buttonSymbol: "",
+          buttonSymbolSub: "",
+        }}
+      />
       {textOnOrOff === 0 ? (
         ""
       ) : (
