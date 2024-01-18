@@ -3,6 +3,8 @@ import { Form, useActionData } from "react-router-dom";
 import Fieldset from "../Fieldset/Fieldset";
 import { Fragment } from "react";
 
+import Result from "../Result/Result";
+
 function InputForm({ formData }) {
   const actionData = useActionData();
   return (
@@ -11,7 +13,18 @@ function InputForm({ formData }) {
         <Fieldset fieldset={formData} />
       </Form>
       {actionData && actionData.error && <p>{actionData.error}</p>}
-      {actionData && actionData.c10Rating && <p>{actionData.c10Rating}</p>}
+      {actionData && actionData.c10Rating && (
+        <Result
+          resultData={{
+            parameterName: "Basic Dynamic Load Rating",
+            alternativeParameterName: "Catalog load rating",
+            parameterSymbol: "C",
+            parameterSubSymbol: "10",
+            value: actionData.c10Rating,
+            unit: "kN",
+          }}
+        />
+      )}
     </Fragment>
   );
 }
