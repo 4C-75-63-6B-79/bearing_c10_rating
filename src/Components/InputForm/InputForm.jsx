@@ -4,6 +4,7 @@ import Fieldset from "../Fieldset/Fieldset";
 import { Fragment } from "react";
 
 import Result from "../Result/Result";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 function InputForm({ formData }) {
   const actionData = useActionData();
@@ -12,7 +13,9 @@ function InputForm({ formData }) {
       <Form method="POST">
         <Fieldset fieldset={formData} />
       </Form>
-      {actionData && actionData.error && <p>{actionData.error}</p>}
+      {actionData && actionData.error && (
+        <ErrorMessage errorData={actionData.error} />
+      )}
       {actionData && actionData.c10Rating && (
         <Result
           resultData={{
