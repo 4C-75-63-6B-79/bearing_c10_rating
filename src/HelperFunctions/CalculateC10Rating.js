@@ -8,7 +8,7 @@ export default async function calculateC10Rating({ request }) {
   const valueOfA = Number(data.get("typeOfBearing"));
 
   if (isNaN(designLoad) || isNaN(designLife) || isNaN(valueOfA)) {
-    return { error: "Please enter only numbers" };
+    return { errorMessage: "Please enter only numbers" };
   }
 
   const c10Rating =
