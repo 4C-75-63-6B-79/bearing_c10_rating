@@ -11,6 +11,7 @@ import calculateC10Rating from "../HelperFunctions/CalculateC10Rating";
 
 import Home from "../Routes/Home/Home";
 import BearingLoadLifeAtRatedReliability from "../Routes/BearingLoadLifeAtRatedReliability/BearingLoadLifeAtRatedReliability";
+import RelatingLoadLifeReliability from "../Routes/RelatingLoadLifeReliability/RelatingLoadLifeReliability";
 
 function BearingSelector() {
   const router = createBrowserRouter(
@@ -21,6 +22,11 @@ function BearingSelector() {
           path="BearingLoadLifeAtRatedReliability"
           element={<BearingLoadLifeAtRatedReliability />}
           action={calculateC10Rating}
+        />
+        <Route
+          path="RelatingLoadLifeReliability"
+          element={<RelatingLoadLifeReliability />}
+          // action={calculateC10Rating}
         />
       </Route>,
     ),
