@@ -14,6 +14,11 @@ export default async function calculateC10Rating({ request }) {
   const c10Rating =
     designLoad * Math.pow(designLife / Math.pow(10, 6), 1 / valueOfA);
   return {
-    c10Rating: c10Rating,
+    parameterName: "Basic Dynamic Load Rating",
+    alternativeParameterName: "Catalog load rating",
+    parameterSymbol: "C",
+    parameterSubSymbol: "10",
+    resultValue: c10Rating,
+    unit: "kN",
   };
 }

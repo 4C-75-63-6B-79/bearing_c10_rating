@@ -16,15 +16,10 @@ function InputForm({ formData }) {
       {actionData && actionData.error && (
         <ErrorMessage errorData={actionData.error} />
       )}
-      {actionData && actionData.c10Rating && (
+      {actionData && actionData.resultValue && (
         <Result
           resultData={{
-            parameterName: "Basic Dynamic Load Rating",
-            alternativeParameterName: "Catalog load rating",
-            parameterSymbol: "C",
-            parameterSubSymbol: "10",
-            value: actionData.c10Rating,
-            unit: "kN",
+            ...actionData,
           }}
         />
       )}

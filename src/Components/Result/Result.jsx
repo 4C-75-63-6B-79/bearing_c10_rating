@@ -20,7 +20,7 @@ function Result({ resultData }) {
         )}
         {resultData["parameterSymbol"] && ")"} is{" "}
         <b>
-          <i>{resultData["value"]}</i>
+          <i>{resultData["resultValue"]}</i>
         </b>
         {resultData["unit"] && " "}
         {resultData["unit"] && (
@@ -41,7 +41,7 @@ Result.propTypes = {
     alternativeParameterName: PropTypes.string.isRequired,
     parameterSymbol: PropTypes.string.isRequired,
     parameterSubSymbol: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired,
+    resultValue: PropTypes.number.isRequired,
     unit: PropTypes.string.isRequired,
   }),
 };
