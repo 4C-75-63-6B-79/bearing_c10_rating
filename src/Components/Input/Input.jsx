@@ -11,6 +11,9 @@ function Input({ inputData }) {
     }),
     ...(inputData["inputSize"] !== "" && { size: inputData["inputSize"] }),
     ...(inputData["inputValue"] !== "" && { value: inputData["inputValue"] }),
+    ...(inputData["defaultValue"] !== "" && {
+      defaultValue: inputData["defaultValue"],
+    }),
     ...(inputData["inputPlaceholder"] !== "" && {
       placeholder: inputData["inputPlaceholder"],
     }),
@@ -69,6 +72,7 @@ Input.propTypes = {
     inputSize: PropTypes.string.isRequired,
     inputValue: PropTypes.string.isRequired,
     inputPlaceholder: PropTypes.string.isRequired,
+    defaultValue: PropTypes.string,
     inputRequired: PropTypes.oneOf([true, false, ""]),
     defaultChecked: PropTypes.oneOf([true, false, ""]),
   }),
