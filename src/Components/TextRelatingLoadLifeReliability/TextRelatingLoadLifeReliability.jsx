@@ -57,166 +57,171 @@ function TextRelatingLoadLifeReliability() {
               directly going to plagiarize the formula for our calculations. The
               formula and the meaning of symbols used in it are given below.
               <br></br>
-              <center>
-                <b>
-                  <font size="5">
-                    C<sub>10</sub> = a
-                    <sub>
-                      <i>f</i>
-                    </sub>{" "}
-                    F
-                    <sub>
-                      <i>D</i>
-                    </sub>{" "}
-                    &#91;{" "}
-                    <i>
-                      x<sub>D</sub>
-                    </i>{" "}
-                    &#123; <i>x</i>
-                    <sub>0</sub> + &#40; <i>&theta;</i> - <i>x</i>
-                    <sub>0</sub> &#41; &#91; ln &#40; 1 &frasl;{" "}
-                    <i>
-                      R<sub>D</sub>
-                    </i>{" "}
-                    &#41; &#93;{" "}
-                    <sup>
-                      <i>1 &frasl; b</i>
-                    </sup>{" "}
-                    &#125; <sup>-1</sup>&#93;
-                    <sup>
-                      <i>1 &frasl; a</i>
-                    </sup>
-                    &emsp;...<i>iii</i>
-                  </font>
-                </b>
-              </center>
-              <br></br>
-              <ul>
-                <li>
-                  The above equation &#40;
+            </p>
+            <center>
+              <b>
+                <font size="5">
+                  C<sub>10</sub> = a
+                  <sub>
+                    <i>f</i>
+                  </sub>{" "}
+                  F
+                  <sub>
+                    <i>D</i>
+                  </sub>{" "}
+                  &#91;{" "}
                   <i>
-                    <b>iii</b>
-                  </i>
-                  &#41; can be further simplified further by noting that ...
-                  <br></br>
-                  <center>
-                    <font size="5">
-                      <b>
-                        ln &#40; 1 /{" "}
-                        <i>
-                          R<sub>D</sub>
-                        </i>{" "}
-                        &#41; = &#40; 1 -{" "}
-                        <i>
-                          R<sub>D</sub>
-                        </i>
-                        &#41;
-                      </b>
-                    </font>
-                  </center>
-                </li>
-                <li>
-                  So the equation &#40; <i>iii</i> &#41; can be written as
-                  <br></br>
-                  <center>
-                    <font size="5">
-                      <b>
-                        C<sub>10</sub> = a
-                        <sub>
-                          <i>f</i>
-                        </sub>{" "}
-                        F
-                        <sub>
-                          <i>D</i>
-                        </sub>{" "}
-                        &#91;{" "}
-                        <i>
-                          x<sub>D</sub>
-                        </i>{" "}
-                        &#123; <i>x</i>
-                        <sub>0</sub> + &#40; <i>&theta;</i> - <i>x</i>
-                        <sub>0</sub> &#41; &#91; &#40; 1 -{" "}
-                        <i>
-                          R<sub>D</sub>
-                        </i>{" "}
-                        &#41; &#93;{" "}
-                        <sup>
-                          <i>1 &frasl; b</i>
-                        </sup>{" "}
-                        &#125; <sup>-1</sup> &#93;
-                        <sup>
-                          <i>1 &frasl; a</i>
-                        </sup>
-                        &emsp;R &gt; = 0.90 &emsp;...<i>iv</i>
-                      </b>
-                    </font>
-                  </center>
-                  <br></br>
-                </li>
-                <li>
-                  When{" "}
+                    x<sub>D</sub>
+                  </i>{" "}
+                  &#123; <i>x</i>
+                  <sub>0</sub> + &#40; <i>&theta;</i> - <i>x</i>
+                  <sub>0</sub> &#41; &#91; ln &#40; 1 &frasl;{" "}
                   <i>
                     R<sub>D</sub>
                   </i>{" "}
-                  = 0.90 the denominator reduces to 1.
-                </li>
-                <li>
-                  Shafts generally have two bearings with individual reliability{" "}
-                  <i>
-                    R<sub>A</sub>
-                  </i>{" "}
-                  and{" "}
-                  <i>
-                    R<sub>B</sub>
-                  </i>
-                  . So reliability of the pair of bearing <i>R</i> is
-                  <center>
-                    <font size="5">
-                      <b>
-                        <i>
-                          R = R<sub>A</sub> R<sub>B</sub>&emsp;...<i>iv</i>
-                        </i>
-                      </b>
-                    </font>
-                  </center>
-                </li>
-                <li>
-                  From the equation <i>iv</i> we observe that both{" "}
-                  <i>
-                    R<sub>A</sub>
-                  </i>{" "}
-                  and{" "}
-                  <i>
-                    R<sub>B</sub>
-                  </i>{" "}
-                  are greater than <i>R</i>. So during sizing bearing one may
-                  begin by equating{" "}
-                  <i>
-                    R<sub>A</sub>
-                  </i>{" "}
-                  and{" "}
-                  <i>
-                    R<sub>B</sub>
-                  </i>{" "}
-                  equal to the square root of reliability goal <i>R</i>. If
-                  somehow the{" "}
-                  <i>
-                    R<sub>A</sub>
-                  </i>{" "}
-                  is greater than the square root of reliability goal <i>R</i>{" "}
-                  then it is better to round down to the reliability of B and
-                  still have the product of{" "}
-                  <i>
-                    R<sub>A</sub>
-                  </i>{" "}
-                  and{" "}
-                  <i>
-                    R<sub>B</sub>
-                  </i>{" "}
-                  exceed reliability goal.
-                </li>
-              </ul>
-            </p>
+                  &#41; &#93;{" "}
+                  <sup>
+                    <i>1 &frasl; b</i>
+                  </sup>{" "}
+                  &#125; <sup>-1</sup>&#93;
+                  <sup>
+                    <i>1 &frasl; a</i>
+                  </sup>
+                  &emsp;...<i>iii</i>
+                </font>
+              </b>
+            </center>
+            <br></br>
+            <ul>
+              <li>
+                The above equation &#40;
+                <i>
+                  <b>iii</b>
+                </i>
+                &#41; can be further simplified further by noting that ...
+                <br></br>
+                <center>
+                  <font size="5">
+                    <b>
+                      ln &#40; 1 /{" "}
+                      <i>
+                        R<sub>D</sub>
+                      </i>{" "}
+                      &#41; = &#40; 1 -{" "}
+                      <i>
+                        R<sub>D</sub>
+                      </i>
+                      &#41;
+                    </b>
+                  </font>
+                </center>
+              </li>
+              <li>
+                So the equation &#40; <i>iii</i> &#41; can be written as
+                <br></br>
+                <center>
+                  <font size="5">
+                    <b>
+                      C<sub>10</sub> = a
+                      <sub>
+                        <i>f</i>
+                      </sub>{" "}
+                      F
+                      <sub>
+                        <i>D</i>
+                      </sub>{" "}
+                      &#91;{" "}
+                      <i>
+                        x<sub>D</sub>
+                      </i>{" "}
+                      &#123; <i>x</i>
+                      <sub>0</sub> + &#40; <i>&theta;</i> - <i>x</i>
+                      <sub>0</sub> &#41; &#91; &#40; 1 -{" "}
+                      <i>
+                        R<sub>D</sub>
+                      </i>{" "}
+                      &#41; &#93;{" "}
+                      <sup>
+                        <i>1 &frasl; b</i>
+                      </sup>{" "}
+                      &#125; <sup>-1</sup> &#93;
+                      <sup>
+                        <i>1 &frasl; a</i>
+                      </sup>
+                      &emsp;R &gt; = 0.90 &emsp;...<i>iv</i>
+                    </b>
+                  </font>
+                </center>
+                <br></br>
+              </li>
+              <li>
+                When{" "}
+                <i>
+                  R<sub>D</sub>
+                </i>{" "}
+                = 0.90 the denominator reduces to 1.
+              </li>
+              <li>
+                Shafts generally have two bearings with individual reliability{" "}
+                <i>
+                  R<sub>A</sub>
+                </i>{" "}
+                and{" "}
+                <i>
+                  R<sub>B</sub>
+                </i>
+                . So reliability of the pair of bearing <i>R</i> is
+                <center>
+                  <font size="5">
+                    <b>
+                      <i>
+                        R = R<sub>A</sub> R<sub>B</sub>&emsp;...<i>iv</i>
+                      </i>
+                    </b>
+                  </font>
+                </center>
+              </li>
+              <li>
+                From the equation <i>iv</i> we observe that both{" "}
+                <i>
+                  R<sub>A</sub>
+                </i>{" "}
+                and{" "}
+                <i>
+                  R<sub>B</sub>
+                </i>{" "}
+                are greater than <i>R</i>. So during sizing bearing one may
+                begin by equating{" "}
+                <i>
+                  R<sub>A</sub>
+                </i>{" "}
+                and{" "}
+                <i>
+                  R<sub>B</sub>
+                </i>{" "}
+                equal to the square root of reliability goal <i>R</i>. If
+                somehow the{" "}
+                <i>
+                  R<sub>A</sub>
+                </i>{" "}
+                is greater than the square root of reliability goal <i>R</i>{" "}
+                then it is better to round down to the reliability of B and
+                still have the product of{" "}
+                <i>
+                  R<sub>A</sub>
+                </i>{" "}
+                and{" "}
+                <i>
+                  R<sub>B</sub>
+                </i>{" "}
+                exceed reliability goal.
+              </li>
+              <li>
+                In our calculations we are going to use the Weibull parameters
+                of the manufacture number 2 as given in the{" "}
+                <b>Shigely Meachanical Design.</b>
+              </li>
+            </ul>
           </div>
         </Fragment>
       )}
